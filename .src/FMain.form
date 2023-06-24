@@ -1,0 +1,65 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  Move(0,0,747,189)
+  #Scaled = False
+  #Translate = False
+  Expand = True
+  Text = "Conversor de archivos .docx ---> .tex"
+  Icon = Picture["yinyan.svg"]
+  Resizable = False
+  Arrangement = Arrange.Vertical
+  AutoResize = True
+  Margin = True
+  { HBox2 HBox
+    Move(0,0,720,36)
+    NoTabFocus = True
+    { txtORIGEN TextBox
+      Move(0,0,216,36)
+      #Translate = False
+      Background = Color.Background
+      NoTabFocus = True
+      Expand = True
+      ReadOnly = True
+      Placeholder = "Seleccione un archivo word con extensión docx"
+    }
+    { btnBuscar Button
+      Move(351,0,144,36)
+      Text = ("Buscar")
+      Picture = Picture["iconos/document.svg"]
+    }
+  }
+  { HBox3 HBox
+    Move(0,36,720,36)
+    NoTabFocus = True
+    { txtDESTINO TextBox
+      Move(0,0,216,36)
+      NoTabFocus = True
+      Expand = True
+      Placeholder = ("Indique el nombre de salida")
+    }
+    { btnCONVERTIR Button
+      Move(351,0,144,36)
+      Text = ("Convertir")
+      Picture = Picture["iconos/ok.svg"]
+    }
+  }
+  { HBox7 HBox
+    Move(0,72,720,36)
+    { lblMENSAJE Label
+      Move(0,0,144,36)
+      Font = Font["Italic"]
+      Expand = True
+    }
+    { btnListo Button
+      Move(351,0,144,36)
+      Visible = False
+      Text = ("Listo")
+    }
+    { btnSalir Button
+      Move(558,0,144,36)
+      Text = ("Salir")
+      Picture = Picture["iconos/close.svg"]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+# Gambas Project File 3.0
+Title=Conversor de .docx a .tex
+Startup=FMain
+Icon=yinyan.svg
+Version=0.0.10
+Component=gb.image
+Component=gb.gui.qt
+Component=gb.form
+Component=gb.form.dialog
+TabSize=2
+Language=en_US
+Maintainer=Alberto Moyano
+Vendor=AlbertoMoyano
+Address=alberto.alejandro.moyano@gmail.com
+License=General Public License
+PackageName=conversor-0.0.10
+PackageVersion=10
+CreateEachDirectory=1
+Packager=1
+Systems=archlinux
+Menus=archlinux:"Applications/Editors"
+Groups=archlinux:"editors"
