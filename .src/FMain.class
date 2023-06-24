@@ -31,18 +31,19 @@ Public Sub btnCONVERTIR_Click()
   txtORIGEN.Text = Dialog.Path
 
   escapedPath = Replace(Dialog.Path, " ", "\\ ") ' Escapa los espacios en blanco en la ruta
-  escapedPath = Replace(escapedPath, "'", "'\\''") ' Escapa las comillas simples en la ruta
+  escapedPath = Replace(escapedPath, "'", "'\\'") ' Escapa las comillas simples en la ruta
 
   Shell "pandoc --wrap=none --extract-media=./ -t latex -f docx " & escapedPath & " -o " & destino
+
+  If File.Dir(destino) = "" Then
+    lblMENSAJE.Text = "Hubo problemas en la conversión del archivo."
+  Else
+    lblMENSAJE.Text = "El archivo se ha convertido correctamente."
+  End If
 
   btnListo.Visible = True
   btnListo.Default = True
   btnSalir.Visible = False
-  ' If File.RealPath(destino) Then
-  '   lblMENSAJE.Text = "El archivo se ha convertido correctamente."
-  ' Else
-  '   lblMENSAJE.Text = "Hubo problemas en la conversión del archivo."
-  ' Endif
 
 End
 
